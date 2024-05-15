@@ -30,7 +30,9 @@ public class login extends javax.swing.JFrame {
         try
         {
             con=connect.ConnetDB();
-            String value = "select uid from details where uname= '" + uname.getText() + "' and pwd ='" + pwd.getText() + "'";
+            @SuppressWarnings("deprecation")
+            String a =pwd.getText();
+            String value = "select uid from details where uname= '" + uname.getText() + "' and pwd ='" + a+ "'";
             ps=con.prepareStatement(value);
             rs=ps.executeQuery();
             if (rs.next())  
@@ -68,7 +70,7 @@ public class login extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Sign-In");
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(153, 255, 255));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Cambria", 3, 36)); // NOI18N
@@ -146,7 +148,7 @@ public class login extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(uname_1, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(115, Short.MAX_VALUE))
+                .addContainerGap(50, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -175,16 +177,16 @@ public class login extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(0, 0, 0)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(0, 0, 0)
                 .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGap(0, 0, 0))
         );
 
         pack();
@@ -192,7 +194,7 @@ public class login extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        this.hide();
+        
         signup frm = new signup();
         frm.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
@@ -206,6 +208,7 @@ public class login extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
+        @SuppressWarnings("deprecation")
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:       
         if (uname.getText().equals("")) 
@@ -222,6 +225,7 @@ public class login extends javax.swing.JFrame {
         else
         {
             con=connect.ConnetDB();
+            @SuppressWarnings("deprecation")
             String sq1= "select * from details where uname= '" + uname.getText() + "' and pwd ='" + pwd.getText() + "'";
             try
             {
