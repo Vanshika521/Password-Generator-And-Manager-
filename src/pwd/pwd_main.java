@@ -158,7 +158,7 @@ public class pwd_main extends javax.swing.JFrame {
     private void signinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signinActionPerformed
         // TODO add your handling code here:
       // this.hide();
-       login frm= new login();
+       signin frm= new signin();
        frm.setVisible(true);
     }//GEN-LAST:event_signinActionPerformed
 

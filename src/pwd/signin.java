@@ -16,12 +16,12 @@ import javax.swing.JOptionPane;
  * @author dell
  */
 
-public class login extends javax.swing.JFrame {
+public class signin extends javax.swing.JFrame {
         Connection con=null;
         ResultSet rs=null;
         PreparedStatement ps=null;
     
-    public login() {
+    public signin() {
         initComponents();  
     }
 
@@ -38,7 +38,7 @@ public class login extends javax.swing.JFrame {
             if (rs.next())  
             {
                 int uid_ = rs.getInt("uid");
-                login_1 frm = new login_1(uid_);
+                signin_1 frm = new signin_1(uid_);
                 frm.setVisible(true);
              
             }
@@ -261,21 +261,23 @@ public class login extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(signin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(signin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(signin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(signin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new login().setVisible(true);
+                new signin().setVisible(true);
             }
         });
     }
