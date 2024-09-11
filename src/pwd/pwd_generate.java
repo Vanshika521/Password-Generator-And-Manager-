@@ -19,7 +19,6 @@ public class pwd_generate extends javax.swing.JFrame {
         String specialChars = "!@#$%^&*()_+-=[]{}|;:,.<>?";
         
         // Initialize the characters string based on user selections
-
         String characters = "";
         if (lowerCaseCheckBox.isSelected()) {
         characters = lowerCase+characters;  }
