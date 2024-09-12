@@ -13,6 +13,7 @@ public class pwd_main extends javax.swing.JFrame {
     /**
      * Creates new form main
      */
+    
     public pwd_main() {
         initComponents();
         signin.setEnabled(false);
